@@ -19,7 +19,7 @@ const title= props.isLogin ?'Login' :'Signup'
 <template>
   <div>
     <a-button type="primary" @click="showModal" class="btn">{{ title}}</a-button>
-    <a-modal v-model:open="open" title="title" @ok="handleOk">
+    <a-modal v-model:visible="open" title="title" @ok="handleOk">
       <a-input  class="input" v-if="!isLogin" v-model:value="value" placeholder="Username" />
       <a-input class="input" v-model:value="value" placeholder="Email" />
       <a-input  class="input" v-model:value="value" placeholder="Password" />
